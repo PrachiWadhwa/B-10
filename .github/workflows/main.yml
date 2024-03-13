@@ -1,0 +1,18 @@
+name: Run Batch10
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run_batch10:
+    name: Run batch10.py
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Run Python script
+      run: python batch10.py
