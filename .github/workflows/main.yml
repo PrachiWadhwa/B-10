@@ -1,5 +1,10 @@
-
 name: javacript_workflow
+
+on:
+  push:
+    branches:
+      - main  # Replace 'main' with your branch name if necessary
+
 jobs:
   run_batch10:
     name: Run batch10.py
@@ -12,7 +17,7 @@ jobs:
         run: python batch10.py
 
   set_env_variables:
-    name: Set Environment Variables   # Corrected indentation
+    name: Set Environment Variables
     runs-on: ubuntu-latest
     env:
       VARIABLE_ONE: "value_one"
@@ -22,4 +27,5 @@ jobs:
         run: |
           echo "Variable One: $VARIABLE_ONE"
           echo "Variable Two: $VARIABLE_TWO"
+
 
